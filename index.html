@@ -2,92 +2,107 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>tabela 1</title>
-
-<!------------ESTILO-------------->
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif; /*tipo da fonte*/
-    }
-    table {
-        width: 500px; /*largura da tabela*/
-        border-collapse: collapse;/*elimina espaço entre as células*/
-    }
-    td, th {
-        border: 1px solid black;/*espessura e estilo da borda das células*/
-        padding: 10px; /*distância entre o conteúdo e as bordas*/
-    }
-    caption {
-        font-size: 22px; /*tamanho da fonte do título da tabela*/
-        font-weight: bold; /*peso ou intensidade da fonte*/
-        padding: 10px; /*dintância entre o conteúdo e as bordas*/
-        background-color: lightgray; /*cor do fundo do título da tabela*/ 
-    }    
-     thead, tfoot {
-        background-color: #383838; /*cor do fundo do cabeçalho e rodapé da tabela */
-        color: white; /*cor da fonte*/
-    }   
-    tbody > tr: :nth-child(odd) { /*linhas ímpares*/
-        background-color: white; /*cor de fundo da linha*/
-    }    
-    td.num {
-        text-align: right; /*alinhamneto do texto da class "num"*/    
-    }
-</style>
-<!------------------------------>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
+<style>*{
+    margin:0;
+    padding:0;
+}
+nav{
+    background: #BA0000;
+    height: 30px;
+    padding: 10px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li {
+    float: left;
+    position: relative;
+}
+nav ul li a {
+    display: block;
+    padding: 5px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+nav ul li ul{
+    background-color: #BA0000;
+    top: -5000px;
+    position: absolute;
+}
+nav ul li:hover ul {
+    left: 0px;
+    top:30px;
+}
+</style>
 <body>
-    <h1>estrutura de tabelas grandes</h1>
-<!--
-    ANATOMIA PARA TABELAS GRANDES 
-    TABLE 
-        CAPTION
+  <nav>
+   <ul>
+    <li> <a href="">1ºEM- informática para web</a></li>
+    <ul>
+        <li><a href="">língua portuguesa</a></li>
+        <li><a href="">inglês</a></li>
+        <li><a href="">espanhol</a></li>
+        <li><a href="">matemática</a></li>
+        <li><a href="">educação física</a></li>
+        <li><a href="">arte</a></li>
+        <li><a href="">filosofia</a></li>
+        <li><a href="">sociologia</a></li>
+        <li><a href="">arte digital</a></li>
+        <li><a href="">banco de dados</a></li>
+        <li><a href="">fundamentos da informática</a></li>
+        <li><a href="">programação e algoritmos</a></li>
+        <li><a href="">gestão de conteúdo web</a></li>
+        <li><a href="">interface web I</a></li>
+    </ul>
+    
+        <li><a href="">2ºEM - informática para web</a></li>
+    
+    <ul>
+        <li><a href="">língua portuguesa</a></li>
+        <li><a href="">inglês</a></li>
+        <li><a href="">matemática</a></li>
+        <li><a href="">educação física</a></li>
+        <li><a href="">história</a></li>
+        <li><a href="">geografia</a></li>
+        <li><a href="">física</a></li>
+        <li><a href="">química</a></li>
+        <li><a href="">biologia</a></li>
+        <li><a href="">gestão de conteúdo web II</a></li>
+        <li><a href="">interface web II</a></li>
+        <li><a href="">usabilidade e design de interação</a></li>
+        <li><a href="">desenvolvimento para ispositivos móveis I</a></li>
+        <li><a href="">sistemas web I</a></li>
+    </ul>
 
-        THEAD 
-            TH (table row,) TD (tabel data), TH (table head)
-        TBODY 
-             TH (table row,) TD (tabel data), TH (table head)
-        TFOOD
-            TH (table row,) TD (tabel data), TH (table head) 
---> 
-<table>
-    <caption>população dos estados</caption>
-   
-    <thead>
-        <tr>
-            <th colspan="2"> SUDESTE</th>
-        </tr>
-        <tr>
-            <th>estado</th>
-            <th style="width: 50px;">quantidade</th>
-        </tr>
+        <li><a href="">3ºEM - informática para web</a></li>
+        <ul>
+        <li><a href="">língua portuguesa</a></li>
+        <li><a href="">inglês</a></li>
+        <li><a href="">matemática</a></li>
+        <li><a href="">história</a></li>
+        <li><a href="">geografia</a></li>
+        <li><a href="">física</a></li>
+        <li><a href="">química</a></li>
+        <li><a href="">biologia</a></li>
+        <li><a href="">desenvolvimento para dispositivos móveis II</a></li>
+        <li><a href="">sistemas web II</a></li>
+        <li><a href="">acessibilidade digital</a></li>
+        <li><a href="">ética e cidadania organizacional</a></li>
+        <li><a href="">segurança da informação</a></li>  
+        <li><a href="">PDTCC</a></li>
+    </ul>
 
-    </thead>
-    <tbody>
-        <tr> 
-            <td>são paulo</td>
-            <td class="num">44 milhões</td>
-        </tr>
-        <tr>
-          <td>minas gerais</td>
-          <td class="num">20 milhões</td>  
-        </tr>
-        <tr>
-            <td>rio de janeiro</td>
-            <td class="num">16 milhões</td>
-        </tr>
-        <tr>
-            <td>espirito santo</td>
-            <td class="num">4 milhões</td>
-            </tr>
-    </tbody>
-
-    <tfoot>
-        <tr>
-            <th>total de habitantes</th>
-            <td class="num"><strong>84 milhões</strong></td>
-        </tr>
-    </tfoot>
+   </ul>
+                </NAV>
 </body>
 </html>
